@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no, email=no, address=no" />
     <meta name="description" content="Bunoom — a friendly TOEFL reading practice companion." />
     <title>Bunoom · TOEFL reading practice</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261015-3" />
+    <link rel="stylesheet" href="styles.css?v=20261015-4" />
   </head>
   <body>
     <header class="topbar">
@@ -49,7 +50,11 @@
     <footer class="footer"><a class="brand" href="#home"><span class="bunny-mark" aria-hidden="true"><i></i><i></i><b></b><b></b></span><span>Bunoom</span></a><span>One page at a time.</span><span>© 2026 Bunoom</span></footer>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="supabase-config.js"></script>
-    <script src="app.js?v=20261015-3"></script>
+    <script src="app.js?v=20261015-4"></script>
+    <script>
+      document.querySelector('#pin-label')?.remove();
+      document.querySelector('#auth-verify')?.remove();
+    </script>
     <script src="news.js?v=20261014-7"></script>
   </body>
 </html>
