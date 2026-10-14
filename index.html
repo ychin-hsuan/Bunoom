@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bunoom — a friendly TOEFL reading practice companion." />
+    <title>Bunoom · TOEFL reading practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Bunoom home"><span class="bunny-mark" aria-hidden="true"><i></i><i></i><b></b><b></b></span><span>Bunoom</span></a>
+      <nav class="nav-links" aria-label="Main navigation"><a class="active" href="#home">Home</a><a href="#practice">Practice</a><a href="#news">News</a><a href="#progress">My progress</a></nav>
+      <div class="top-actions"><span class="daily-count"><span class="sun">●</span> <strong id="header-progress">0</strong>/3 today</span><button class="avatar" id="account-button" aria-label="Open account">K</button></div>
+    </header>
+
+    <main id="home">
+      <section class="welcome-section">
+        <div class="welcome-copy"><p class="eyebrow" id="today-label">TODAY · OCTOBER 14</p><h1>Read a little.<br /><span>Learn a lot.</span></h1><p>Friendly TOEFL reading practice for curious minds. Build your reading speed, grow your vocabulary, and make progress one page at a time.</p><button class="primary-button hero-cta" data-start>Start today’s practice <span>→</span></button></div>
+      </section>
+
+      <section class="progress-section" id="progress" aria-labelledby="progress-title"><div class="progress-copy"><p class="eyebrow">KEEP GOING</p><h2 id="progress-title">Your reading garden</h2><p>Every completed passage leaves a little mark. Come back tomorrow and add another one.</p><div class="progress-numbers"><div><strong id="days-number">0</strong><span>day streak</span></div><div><strong id="passages-number">0</strong><span>passages read</span></div><div><strong>7</strong><span>day goal</span></div></div></div><div class="stamp-card" aria-label="Seven day reading stamp card"><div class="stamp-card-top"><strong>MY READING WEEK</strong><span id="week-label">THIS WEEK</span></div><div class="stamps" id="stamps"></div><div class="stamp-footer"><span><i class="stamp-key done"></i> completed</span><span><i class="stamp-key today"></i> today</span></div></div></section>
+
+      <section class="daily-section" id="practice" aria-labelledby="daily-title">
+        <div class="section-heading"><div><p class="eyebrow">YOUR DAILY 3</p><h2 id="daily-title">A small card, every day</h2><p>Complete three passages to fill today’s card. No pressure — just a little practice.</p></div><div class="quota-badge"><strong id="quota-number">0</strong><span>of 3 complete</span></div></div>
+        <div class="daily-grid" id="daily-grid"></div>
+      </section>
+
+      <section class="news-section" id="news" aria-labelledby="news-title"><div class="section-heading"><div><p class="eyebrow">BUNOOM NEWS PICK</p><h2 id="news-title">Read what’s happening</h2><p>Short headlines from today’s world, with the original source linked below.</p></div><button class="text-button" id="news-load">Load today’s news <span>→</span></button></div><p class="news-status" id="news-status">Sign in to load three fresh science headlines.</p><div class="news-grid" id="news-grid"></div></section>
+
+      <section class="topics-section" aria-labelledby="topics-title"><div class="section-heading"><div><p class="eyebrow">EXPLORE TOPICS</p><h2 id="topics-title">What are you curious about?</h2></div><button class="text-button">See all topics <span>→</span></button></div><div class="topic-row"><button class="topic-card coral" data-topic="science"><span class="topic-icon">✳</span><strong>Science & nature</strong><small>42 passages</small></button><button class="topic-card yellow" data-topic="history"><span class="topic-icon">▤</span><strong>History & culture</strong><small>35 passages</small></button><button class="topic-card blue" data-topic="society"><span class="topic-icon">◌</span><strong>Society & ideas</strong><small>28 passages</small></button><button class="topic-card lavender" data-topic="technology"><span class="topic-icon">⌁</span><strong>Technology</strong><small>19 passages</small></button></div></section>
+
+      <section class="how-section"><div><p class="eyebrow">HOW IT WORKS</p><h2>Read at your<br /><span>own pace.</span></h2><p>Look up a word without leaving the page, listen to the passage, then check if you understood the big picture.</p></div><div class="how-list"><div><span>01</span><strong>Read & notice</strong><p>Press and hold a word for a friendly definition and example.</p></div><div><span>02</span><strong>Listen & follow</strong><p>Play the passage with natural text-to-speech and follow along.</p></div><div><span>03</span><strong>Answer & remember</strong><p>Try TOEFL-style questions and see why an answer is correct.</p></div></div></section>
+      <section class="bottom-art-section"><div class="welcome-art" aria-label="Daily reading progress illustration"><div class="sun-shape"></div><div class="book-shape"><span></span><span></span></div><div class="art-label"><strong>your little<br />reading ritual</strong><small>three short passages a day</small></div><div class="line-spark spark-one">✳</div><div class="line-spark spark-two">✦</div></div></section>
+    </main>
+
+    <section class="reader-view" id="reader-view" hidden aria-labelledby="reader-title">
+      <div class="reader-top"><button class="back-button" data-back>← Back home</button><div class="reader-progress"><span id="reader-progress-label">Passage 1 of 3</span><div><i id="reader-progress-bar"></i></div></div><button class="reader-close" data-back aria-label="Close reader">×</button></div>
+      <div class="reader-layout"><aside class="reader-sidebar"><span class="tag" id="reader-tag">SCIENCE & NATURE</span><h2 id="reader-title">Why some forests are louder</h2><p id="reader-subtitle">A TOEFL-style reading passage</p><div class="reader-meta"><span><b id="reader-level">B1</b> level</span><span><b id="reader-minutes">8</b> min</span></div><div class="tool-tip"><span>◎</span><p><strong>Reading tip</strong> Try to understand the paragraph’s main idea before looking up every word.</p></div></aside><article class="reader-paper"><div class="paper-heading"><div><span class="paper-kicker">TOEFL READING PRACTICE</span><h3 id="paper-title">Why some forests are louder</h3></div><div class="paper-actions"><button id="play-passage" class="listen-button">▶ <span>Listen</span></button><button id="font-button" class="icon-button" aria-label="Change text size">A<sup>+</sup></button></div></div><div class="article-body" id="article-body"></div><div class="article-hint"><span>⌁</span><div><strong>Reading with Bunoom</strong><p>Press and hold a word for its meaning. Double-click a sentence to see its Chinese translation.</p></div></div><div class="reader-footer"><span id="reader-word-count">0 words</span><button class="primary-button" id="quiz-button">Take the questions <span>→</span></button></div></article></div>
+    </section>
+
+    <section class="quiz-view" id="quiz-view" hidden aria-labelledby="quiz-title"><div class="quiz-top"><button class="back-button" data-reader-back>← Back to passage</button><span id="quiz-progress">Question 1 of 3</span><button class="reader-close" data-back>×</button></div><div class="quiz-card"><div class="quiz-label">CHECK YOUR READING</div><h2 id="quiz-title">What is the main idea of the passage?</h2><p id="quiz-prompt">Choose the best answer.</p><div class="options" id="quiz-options"></div><div class="quiz-feedback" id="quiz-feedback"></div><div class="quiz-actions"><button class="ghost-button" id="explain-button">Why?</button><button class="primary-button" id="next-question">Check answer <span>→</span></button></div></div></section>
+
+    <div class="word-popover" id="word-popover" hidden><span class="popover-word" id="popover-word"></span><span class="popover-type" id="popover-type">noun</span><p id="popover-definition"></p><div><strong>Example</strong><span id="popover-example"></span></div></div><div class="sentence-popover" id="sentence-popover" hidden><span>句子翻譯</span><p id="sentence-translation"></p></div>
+    <div class="auth-modal" id="auth-modal" hidden><div class="auth-card"><button class="reader-close auth-close" id="auth-close" aria-label="Close account">×</button><p class="eyebrow">YOUR READING ACCOUNT</p><h2 id="auth-title">Sign in with a magic link.</h2><p class="auth-description" id="auth-description">We’ll send a secure sign-in link to sync your completed passages and streak.</p><form id="auth-form"><label>Email<input id="auth-email" type="email" autocomplete="email" required placeholder="you@example.com" /></label><label id="pin-label" hidden>6-digit PIN<input id="auth-pin" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" placeholder="000000" /></label><button class="primary-button" type="submit" id="auth-submit">Send sign-in link <span>→</span></button><button class="primary-button" type="button" id="auth-verify" hidden>Verify PIN <span>→</span></button></form><p class="auth-message" id="auth-message"></p><button class="auth-switch" id="auth-switch" type="button">Use another email</button><button class="ghost-button auth-signout" id="auth-signout" type="button" hidden>Sign out</button></div></div>
+    <footer class="footer"><a class="brand" href="#home"><span class="bunny-mark" aria-hidden="true"><i></i><i></i><b></b><b></b></span><span>Bunoom</span></a><span>One page at a time.</span><span>© 2026 Bunoom</span></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="app.js?v=20261014-3"></script>
+    <script src="news.js?v=20261014-7"></script>
+  </body>
+</html>
